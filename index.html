@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Idhanth Premkumar: CS at the University of Georgia. Experience, open source, and projects.">
+<title>Idhanth Premkumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #16191f; --muted: #5d6573;
+  --line: #dfe3ea; --accent: #2b5fd9; --ok: #1f7a4d;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1216; --surface: #161a20; --fg: #e8ebf0; --muted: #98a1af;
+    --line: #262c35; --accent: #7fa4ff; --ok: #5cc690; color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 16px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; padding-block: 72px 56px; display: flex; flex-direction: column; gap: 64px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.intro { display: flex; flex-direction: column; gap: 18px; }
+.status { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; font: 500 12.5px/1 var(--mono); color: var(--muted); padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--ok); }
+h1 { font: 650 clamp(40px, 7vw, 58px)/1.02 var(--display); letter-spacing: -0.025em; margin: 0; text-wrap: balance; }
+.lede { font-size: 18px; color: var(--muted); max-width: 58ch; margin: 0; }
+.lede strong { color: var(--fg); font-weight: 500; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 500 14px/1.4 var(--mono); }
+section { display: grid; grid-template-columns: 140px 1fr; gap: 12px 28px; }
+@media (max-width: 640px) { section { grid-template-columns: 1fr; } }
+h2 { font: 500 12px/1.9 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0; }
+.list { display: flex; flex-direction: column; min-width: 0; }
+.item { padding-block: 18px; border-top: 1px solid var(--line); min-width: 0; }
+.item:first-child { border-top: 0; padding-top: 0; }
+.row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
+h3 { font: 600 17px/1.35 var(--display); margin: 0; letter-spacing: -0.005em; }
+.meta { font: 400 13px/1.4 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.role { color: var(--muted); font-size: 15px; margin: 2px 0 0; }
+.item p.desc { margin: 8px 0 0; max-width: 62ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding: 0; list-style: none; }
+.tags li { font: 400 12px/1 var(--mono); color: var(--muted); padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); }
+.pill { font: 500 11.5px/1 var(--mono); padding: 4px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.pill.merged { color: var(--ok); }
+.pill.review { color: var(--muted); }
+.group-label { font: 500 13px/1 var(--mono); color: var(--fg); margin: 26px 0 4px; }
+.group-label:first-child { margin-top: 0; }
+.contact { display: flex; flex-direction: column; gap: 14px; }
+.contact p { margin: 0; max-width: 58ch; }
+.email { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); align-self: flex-start; max-width: 100%; }
+.email code { font: 500 15px/1.3 var(--mono); user-select: all; overflow-wrap: anywhere; }
+.email button { font: 500 12.5px/1 var(--mono); color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; cursor: pointer; }
+.email button:hover { border-color: var(--accent); color: var(--accent); }
+footer { font: 400 12.5px/1.5 var(--mono); color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="intro">
+    <span class="status">Seeking Summer 2027 SWE internships</span>
+    <h1>Idhanth Premkumar</h1>
+    <p class="lede">Computer Science at the <strong>University of Georgia</strong>, graduating May 2028. I build backend-heavy software: deployment pipelines, realtime systems, and full-stack apps, and I do research at the UGA LLM Lab.</p>
+    <nav class="links" aria-label="Profiles">
+      <a href="https://github.com/idhanth">GitHub</a>
+      <a href="mailto:idhanthpersonal@gmail.com">Email</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <section aria-labelledby="exp">
+    <h2 id="exp">Experience</h2>
+    <div class="list">
+      <article class="item">
+        <div class="row"><h3>UGA LLM Lab</h3><span class="meta">Sep 2026 – now</span></div>
+        <p class="role">Undergraduate Research Assistant · Dr. Tianming Liu</p>
+        <p class="desc">Building a full-stack application to support the lab's LLM research.</p>
+      </article>
+      <article class="item">
+        <div class="row"><h3>Alphius</h3><span class="meta">2026 · Remote</span></div>
+        <p class="role">Software Engineering Intern</p>
+        <p class="desc">Helped build Orion, an AI platform that analyzes markets and company financials for private equity and M&amp;A teams.</p>
+      </article>
+      <article class="item">
+        <div class="row"><h3>Dev Dogs at UGA</h3><span class="meta">2025 – now</span></div>
+        <p class="role">Project team developer</p>
+      </article>
+      <article class="item">
+        <div class="row"><h3>ACM at UGA</h3><span class="meta">2025 – now</span></div>
+        <p class="role">Member</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="oss">
+    <h2 id="oss">Open source</h2>
+    <div class="list">
+      <article class="item">
+        <div class="row"><h3><a href="https://github.com/microsoft/scope/pull/1437">microsoft/scope #1437</a></h3><span class="pill merged">Merged</span></div>
+        <p class="desc">Factored duplicated integration-test code across the ACP workers into a shared <code>packages/test-utils</code> package and wired it into CI path filters (issue #650).</p>
+      </article>
+      <article class="item">
+        <div class="row"><h3><a href="https://github.com/microsoft/scope/pull/1445">microsoft/scope #1445</a></h3><span class="pill review">In review</span></div>
+        <p class="desc">Fix for the HAR view detail panel not staying visible (issue #740).</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects" aria-labelledby="proj">
+    <h2 id="proj">Projects</h2>
+    <div class="list">
+      <p class="group-label">Systems</p>
+      <article class="item">
+        <div class="row"><h3>DeployLite</h3><span class="meta">Deployed</span></div>
+        <p class="desc">A lightweight Git-to-production platform for Dockerized apps. Signed GitHub webhooks trigger Docker builds, candidate releases go live only after health checks pass, and failed deploys roll back automatically, with crash reconciliation on restart.</p>
+        <ul class="tags"><li>Go</li><li>PostgreSQL</li><li>Docker</li><li>Caddy</li><li>SSE</li><li>GitHub Actions</li><li>Oracle Cloud</li></ul>
+      </article>
+      <article class="item">
+        <div class="row"><h3>CourtQueue</h3><span class="meta">Deployed</span></div>
+        <p class="desc">Realtime queueing and matchmaking for pickup basketball: fair player selection, balanced 5v5 team formation, and multiple courts running concurrently.</p>
+        <ul class="tags"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>WebSockets</li><li>Flyway</li><li>Testcontainers</li></ul>
+      </article>
+
+      <p class="group-label">Full-stack</p>
+      <article class="item">
+        <div class="row"><h3>ServiceFlow</h3><span class="meta">Deployed</span></div>
+        <p class="desc">Multi-tenant operations platform for service businesses, covering customer booking, employee scheduling, and job execution.</p>
+        <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>S3</li></ul>
+      </article>
+      <article class="item">
+        <div class="row"><h3>CoursePilot</h3></div>
+        <p class="desc">College schedule generator that builds conflict-free schedules from a course list and filters them by your preferences.</p>
+        <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>FastAPI</li><li>PostgreSQL</li></ul>
+      </article>
+      <article class="item">
+        <div class="row"><h3>TripPogo</h3></div>
+        <p class="desc">Collaborative travel planner for building trips together with friends.</p>
+      </article>
+      <article class="item">
+        <div class="row"><h3>ClosetIQ</h3></div>
+        <p class="desc">Wardrobe manager that recommends outfits from the clothes you already own.</p>
+      </article>
+
+      <p class="group-label">Tools</p>
+      <article class="item">
+        <div class="row"><h3>SWE Intern Board</h3></div>
+        <p class="desc">Personal internship-postings tracker built to surface new roles faster than existing boards, with push alerts to my phone.</p>
+        <ul class="tags"><li>Oracle Cloud</li><li>ntfy</li></ul>
+      </article>
+      <article class="item">
+        <div class="row"><h3>jd-keyword-match</h3></div>
+        <p class="desc">Chrome extension that reads a job description and highlights the keywords missing from my resume.</p>
+        <ul class="tags"><li>Chrome Extensions</li><li>JavaScript</li><li>Claude API</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="ct">
+    <h2 id="ct">Contact</h2>
+    <div class="contact">
+      <p>I'm looking for software engineering internships for Summer 2027. Email is the best way to reach me.</p>
+      <div class="email">
+        <code id="addr">idhanthpersonal@gmail.com</code>
+        <button type="button" id="copy">Copy</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>Idhanth Premkumar · Athens, GA</footer>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var btn = this, text = document.getElementById('addr').textContent;
+  function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); }
+  function fallback() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('addr'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected');
+  }
+  try { navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback); } catch (e) { fallback(); }
+});
+</script>
+</body>
+</html>
